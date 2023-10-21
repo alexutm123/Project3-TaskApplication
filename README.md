@@ -8,6 +8,7 @@ Client
 
 Server(Controller)
 
-![image](https://github.com/alexutm123/Project3-TaskApplication/blob/main/screen/Screenshot_save.jpg)Result
+![image](https://github.com/alexutm123/Project3-TaskApplication/blob/main/screen/Screenshot_save.jpg)
+Result
 
 ![image](https://github.com/alexutm123/Project3-TaskApplication/blob/main/screen/Screenshot_2.jpg)
