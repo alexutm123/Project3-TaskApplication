@@ -17,22 +17,22 @@ public class ClientTaskApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ClientTaskApplication.class, args);
 	
-		  // URL для серверного приложения 
+		// URL for server application
       String serverUrl = "http://localhost:8080/create";
       
-      // Создаем задачу
+      
       Task task = new Task();
       task.setTitle("New");
       task.setDescription("Task");
       task.setCompleted(false);
       
-      // Создаем заголовки для POST-запроса
+   // Create headers for POST request
       HttpHeaders headers = new HttpHeaders();
       
-      // Создаем HTTP-сущность для отправки данных на сервер
+   // Create an HTTP entity to send data to the server
       HttpEntity<Task> request = new HttpEntity<>(task, headers);
       
-      // Отправляем POST-запрос на сервер
+   // Send POST request to the server
       ResponseEntity<Task> response = new RestTemplate().exchange(
           serverUrl,
           HttpMethod.POST,
@@ -40,10 +40,10 @@ public class ClientTaskApplication {
           Task.class
       );
       
-      // Получаем созданную задачу из ответа
+   // Get the created task from the response
       Task createdTask = response.getBody();
       
-      // Выводим созданную задачу
+   // Output the created task
       System.out.println("A new task has been created:");
       System.out.println("ID: " + createdTask.getId());
       System.out.println("Caption: " + createdTask.getTitle());
